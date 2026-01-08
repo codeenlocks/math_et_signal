@@ -1,0 +1,205 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[francais]{babel}
+\usepackage{amssymb}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amsthm}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{euscript}
+\usepackage{enumerate}
+\usepackage{MnSymbol}
+\usepackage{minitoc}
+\usepackage{blkarray, bigstrut}
+\usepackage{xcolor}
+\usepackage{wasysym}
+\usepackage[all]{xy}
+\usepackage{calrsfs}
+\usepackage{fancyhdr}
+\usepackage[nottoc, notlof, notlot]{tocbibind}
+\usepackage{appendix}
+\usepackage{mathtools}
+\usepackage{array}
+\usepackage{bbm}
+\usepackage{stmaryrd}
+
+\usepackage{geometry}
+
+% Définir les marges personnalisées
+\geometry{
+    a4paper,
+    left=2cm,
+    right=2cm,
+    top=2cm,
+    bottom=2cm
+}
+
+
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[C]{}%{\textbf{page \thepage}} 
+\fancyhead[L]{\slshape\nouppercase{\leftmark}}
+\fancyhead[R]{}%{machin}
+
+\renewcommand{\footrulewidth}{1pt}
+\fancyfoot[L]{\thepage}
+\fancyfoot[C]{}%{\leftmark}
+
+\pagestyle{fancy} 
+
+\allowdisplaybreaks
+
+
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems}
+
+
+\tcbuselibrary{theorems, skins, breakable}
+\newtcbtheorem[number within=section]{prin}{Principe}%
+{colback=blue!0,colframe=blue!35!black,fonttitle=\bfseries,breakable}{th}
+\newtcbtheorem[use counter from=prin, number within=section]{reda}{Rédaction}%
+{colback=red!5,colframe=red!35!black,fonttitle=\bfseries,breakable}{th}
+\newtcbtheorem[use counter from=prin, number within=section]{theo}{Theorem}%
+{colback=red!5,colframe=red!35!black,fonttitle=\bfseries,breakable}{th}
+
+
+\newtcbtheorem[use counter from=prin, number within=section]{coro}{Corollary}%
+{colback=red!5,colframe=red!35!black,fonttitle=\bfseries,breakable}{th}
+\newtcbtheorem[use counter from=prin, number within=section]{lemme}{Lemma}%
+{colback=red!5,colframe=red!35!black,fonttitle=\bfseries,breakable}{th}
+\newtcbtheorem[use counter from=prin, number within=section]{propo}{Proposition}%
+{colback=red!5,colframe=red!35!black,fonttitle=\bfseries,breakable}{th}
+\newtcbtheorem[use counter from=prin, number within=section]{rem}{Remarque}%
+{colback=blue!0,colframe=blue!35!black,fonttitle=\bfseries,breakable}{th}
+
+\newtcbtheorem[use counter from=prin, number within=section]{ex}{Example}%
+{colback=blue!0,colframe=blue!35!black,fonttitle=\bfseries,breakable}{th}
+\newtcbtheorem[use counter from=prin, number within=section]{nota}{Notation}%
+{colback=blue!0,colframe=blue!35!black,fonttitle=\bfseries,breakable}{th}
+\newtcbtheorem[use counter from=prin, number within=section]{defi}{Definition}%
+{colback=green!0,colframe=green!35!black,fonttitle=\bfseries,breakable}{th}
+
+
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\G}{\mathbb{G}}
+
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\U}{\mathbb{U}}
+
+\newcommand{\ao}{\mathfrak{a}}
+\newcommand{\bo}{\mathfrak{b}}
+
+
+\newcommand{\ie}{\mathrm{\textit{i.e.}}}
+
+\newcommand{\Sig}{\textbf{Sin}}
+\newcommand{\expg}{\textbf{Exp}}
+
+\newcommand{\Ro}{\mathcal{R}}
+\newcommand{\Fo}{\mathcal{F}}
+\newcommand{\Mo}{\mathcal{M}}
+\newcommand{\Noo}{\mathcal{N}}
+\newcommand{\Ho}{\mathcal{H}}
+\newcommand{\Po}{\mathcal{P}}
+\newcommand{\Lo}{\mathcal{L}}
+\newcommand{\Qo}{\mathcal{Q}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\Go}{\mathcal{G}}
+\newcommand{\Co}{\mathcal{C}}
+\newcommand{\So}{\mathcal{S}}
+\newcommand{\To}{\mathfrak{T}}
+\newcommand{\Soo}{\mathfrak{S}}
+
+\newcommand{\Aut}{\mathrm{Aut}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\Ima}{\mathrm{Im}}
+\newcommand{\Ree}{\mathrm{Re}}
+\newcommand{\Tr}{\mathrm{Tr}}
+\newcommand{\Sol}{\mathrm{Sol}}
+\newcommand{\Vect}{\mathrm{Vect}}
+\newcommand{\DL}{\mathrm{DL}}
+\newcommand{\ch}{\mathrm{ch}}
+\newcommand{\cotan}{\mathrm{cotan}}
+\newcommand{\sh}{\mathrm{sh}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\Rot}{\mathrm{Rot}}
+\newcommand{\GL}{\mathrm{GL}}
+
+
+
+\newcommand{\Bo}{\mathbf{B}}
+\newcommand{\Ao}{\mathbf{BA}}
+\newcommand{\LN}{\mathbf{Ln}}
+\newcommand{\AAA}{\mathbf{A}}
+\newcommand{\LNA}{\mathbf{La}}
+\newcommand{\SeACV}{\mathbf{SerACV}}
+\newcommand{\SeCV}{\mathbf{SerCV}}
+\newcommand{\SuCV}{\mathbf{SuiCV}}
+
+
+
+\newcommand{\Lor}{\mathcal{L}or}%{\mathrm{Lor}}
+\newcommand{\loro}{\mathfrak{lor}}
+\newcommand{\SLor}{\mathrm{SLor}}
+\newcommand{\Loro}{\mathcal{L}or}
+\newcommand{\New}{\mathrm{New}}
+\newcommand{\SNew}{\mathrm{SNew}}
+\newcommand{\Met}{\mathbf{Met}}
+\newcommand{\Newo}{\mathcal{N}ew}
+\newcommand{\Ort}{\mathrm{O}}
+\newcommand{\SOrt}{\mathrm{SO}}
+\newcommand{\Orto}{\mathcal{O}}
+\newcommand{\Poin}{\mathcal{P}oin}
+\newcommand{\poin}{\mathfrak{poin}}
+\newcommand{\SPoin}{\mathrm{SPoin}}
+\newcommand{\Poino}{\mathcal{P}oin}
+\newcommand{\MAT}{\mathcal{M}at}
+\newcommand{\Kal}{\mathcal{K}}
+\newcommand{\Gam}{\varGamma}
+\newcommand{\msegg}{\llbracket}
+\newcommand{\msegd}{\rrbracket}
+\newcommand{\card}{\mathrm{card}}
+\newcommand{\msegn}{\msegg 1,n \msegd}
+\newcommand{\msegno}{\msegg 0,n \msegd}
+\newcommand{\msegp}{\msegg 1,p \msegd}
+\newcommand{\msegpo}{\msegg 0,p \msegd}
+\newcommand{\msegm}{\msegg 1,m \msegd}
+\newcommand{\msegmo}{\msegg 0,m \msegd}
+\newcommand{\fix}{\mathrm{fix}}
+\newcommand{\Boo}{\mathcal{B}}
+\title{Projet Mathématiques et Signal} 
+\author{Hermès Noumbogo et Becker Obie Obolo}
+
+
+\date{\today}
+\begin{document}  
+                
+\maketitle
+
+\section{Problématique}
+
+La problématique centrale de ce projet est de \textbf{dégager des informations significatives à partir de données climatiques brutes en utilisant des outils mathématiques et de traitement du signal}. Il s'agit d'étudier la variabilité des signaux de données pour identifier et modéliser des cycles temporels (annuels, infra-annuels et pluriannuels) et estimer la part de bruit.
+
+\section{Difficultés Potentielles}
+
+Plusieurs difficultés pourraient être rencontrées au cours de ce projet :
+\begin{itemize}
+    \item \textbf{Gestion des données massives} : Le jeu de données couvre une période de plus de 70 ans, ce qui représente un volume de données conséquent. Le traitement et le nettoyage initial de ces données pourraient s'avérer complexes.
+    \item \textbf{Identification des cycles} : L'identification précise des cycles autres que le cycle annuel (comme les cycles synoptiques ou pluriannuels) peut être ardue en raison de la complexité des signaux et de la présence de bruit. Cela nécessitera l'utilisation d'outils d'analyse de fréquences, tels que la transformée de Fourier, pour mettre en évidence les périodes récurrentes.
+    \item \textbf{Modélisation} : Proposer une modélisation simple mais efficace de l'évolution temporelle des données, en particulier pour les cycles moins évidents, exigera une bonne compréhension des outils mathématiques et une interprétation rigoureuse des résultats.
+    \item \textbf{Estimation du bruit} : Estimer qualitativement la proportion de bruit est un défi, car il faut d'abord isoler les signaux périodiques et les tendances du reste des variations qui peuvent être considérées comme du bruit. Cela demande une approche méthodologique solide.
+    \item \textbf{Compétences en programmation} : Le projet nécessite de bonnes compétences en programmation Python pour l'analyse, la visualisation des données et l'implémentation des algorithmes d'analyse du signal.
+\end{itemize}
+\end{document}
