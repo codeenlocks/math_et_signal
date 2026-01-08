@@ -1,0 +1,26 @@
+# --- Images et résultats (Sorties) ---
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.svg
+
+# --- Données lourdes ---
+*.txt
+*.xlsx
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- Spyder et IDE ---
+.spyderproject/
+.settings/
+.idea/
+.vscode/
+
+# --- Système ---
+.DS_Store
+thumbs.db
