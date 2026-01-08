@@ -3,11 +3,19 @@ import numpy as np
 from fft import signal_utile, FFT
 from data import df, get_full_signal, N, view
 
+debut, fin = 0, 27393
+
+def limitation(duration : int, start = 1950) -> None :
+    global debut, fin
+    debut = int ((start - 1950) * 365.25)
+    fin = debut + int (duration * 365.25)
+
 def main() -> None:
     """
     Script principal pour l'analyse des températures de Strasbourg.
     Modélisation par FFT et extraction du signal périodique.
     """
+    global debut, fin
     
     # 1. Aperçu et préparation des données
     view()
@@ -48,13 +56,14 @@ def main() -> None:
 
     # 5. Gestion de l'axe X (Dates)
     # On place une étiquette tous les 10 ans pour la lisibilité
-    step = 365 * 10
+    step = 365.25*10
     indices = np.arange(0, N, step)
     # On extrait les années correspondantes depuis le DataFrame de data.py
     labels_ans = df['time'].dt.year.iloc[indices].values
 
     plt.xticks(ticks=indices, labels=labels_ans, rotation=45)
     
+    plt.xlim(debut,fin)
     plt.xlabel("Années de prélèvement")
     plt.ylabel("Températures (°C)")
     plt.title("Modélisation du cycle saisonnier à Strasbourg (1950-2024)")
@@ -70,4 +79,13 @@ def main() -> None:
     print(f"Écart-type du bruit blanc : {sigma_bruit:.2f} °C")
 
 if __name__ == "__main__":
-    main()
+    limitation(10), main()
+    #limitation(10,1960), main()
+    #limitation(10,1970), main()
+    #limitation(10,1980), main()
+    #limitation(10,1990), main()
+    #limitation(10,2000), main()
+    #limitation(10,2010), main()
+    #limitation(10,2014), main()
+    
+    
