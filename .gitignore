@@ -1,11 +1,11 @@
-# --- Images et résultats (Sorties) ---
+# --- Images et rÃ©sultats (Sorties) ---
 *.png
 *.jpg
 *.jpeg
 *.pdf
 *.svg
 
-# --- Données lourdes ---
+# --- DonnÃ©es lourdes ---
 *.txt
 *.xlsx
 
@@ -16,11 +16,11 @@ __pycache__/
 *.pyd
 
 # --- Spyder et IDE ---
-.spyderproject/
+.spyproject/
 .settings/
 .idea/
 .vscode/
 
-# --- Système ---
+# --- SystÃ¨me ---
 .DS_Store
 thumbs.db
