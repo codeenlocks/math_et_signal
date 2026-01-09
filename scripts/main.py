@@ -1,3 +1,9 @@
+"""
+@DESCRIPTION
+"""
+
+
+
 import matplotlib.pyplot as plt
 import numpy as np
 from fft import signal_utile, FFT
@@ -5,7 +11,7 @@ from data import df, get_full_signal, N, view
 
 debut, fin = 0, 27393
 start_year = 1950
-end_year = start_year + 10
+end_year = start_year + 9
 
 def limitation(duration : int, start = 1950) -> None :
     global debut, fin, start_year, end_year
@@ -175,13 +181,13 @@ Retirer le "#" selon la période 10 ans désirée.
 """
 
 if __name__ == "__main__":
-    limitation(10), main()
-    limitation(10,1960), main()
-    limitation(10,1970), main()
-    limitation(10,1980), main()
-    limitation(10,1990), main()
-    limitation(10,2000), main()
-    limitation(10,2010), main()
-    limitation(10,2015), main()
+    #limitation(10), main()
+    #limitation(10,1960), main()
+    #limitation(10,1970), main()
+    #limitation(10,1980), main()
+    #limitation(10,1990), main()
+    #limitation(10,2000), main()
+    #limitation(10,2010), main()
+    #limitation(10,2015), main()
     
     

@@ -1,0 +1,250 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[francais]{babel}
+\usepackage{amssymb}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amsthm}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{euscript}
+\usepackage{enumerate}
+\usepackage{minitoc}
+\usepackage{blkarray, bigstrut}
+\usepackage{xcolor}
+\usepackage{wasysym}
+\usepackage[all]{xy}
+\usepackage{calrsfs}
+\usepackage{fancyhdr}
+\usepackage[nottoc, notlof, notlot]{tocbibind}
+\usepackage{appendix}
+\usepackage{float} %
+\usepackage{mathtools}
+\usepackage{booktabs}
+\usepackage{array}
+
+\usepackage{geometry}
+
+% Définir les marges personnalisées
+\geometry{
+    a4paper,
+    left=2cm,
+    right=2cm,
+    top=2cm,
+    bottom=2cm
+}
+
+
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[C]{}%{\textbf{page \thepage}} 
+\fancyhead[L]{\slshape\nouppercase{\leftmark}}
+\fancyhead[R]{}%{machin}
+
+\renewcommand{\footrulewidth}{1pt}
+\fancyfoot[L]{\thepage}
+\fancyfoot[C]{}%{\leftmark}
+
+\pagestyle{fancy} 
+
+\allowdisplaybreaks
+
+
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems}
+
+
+\tcbuselibrary{theorems, skins, breakable}
+\newtcbtheorem[number within=section]{prin}{Principe}%
+{colback=blue!0,colframe=blue!35!black,fonttitle=\bfseries,breakable}{th}
+\newtcbtheorem[use counter from=prin, number within=section]{reda}{Rédaction}%
+{colback=red!5,colframe=red!35!black,fonttitle=\bfseries,breakable}{th}
+\newtcbtheorem[use counter from=prin, number within=section]{theo}{Theorem}%
+{colback=red!5,colframe=red!35!black,fonttitle=\bfseries,breakable}{th}
+
+
+\newtcbtheorem[use counter from=prin, number within=section]{coro}{Corollary}%
+{colback=red!5,colframe=red!35!black,fonttitle=\bfseries,breakable}{th}
+\newtcbtheorem[use counter from=prin, number within=section]{lemme}{Lemma}%
+{colback=red!5,colframe=red!35!black,fonttitle=\bfseries,breakable}{th}
+\newtcbtheorem[use counter from=prin, number within=section]{propo}{Proposition}%
+{colback=red!5,colframe=red!35!black,fonttitle=\bfseries,breakable}{th}
+\newtcbtheorem[use counter from=prin, number within=section]{rem}{Remarque}%
+{colback=blue!0,colframe=blue!35!black,fonttitle=\bfseries,breakable}{th}
+
+\newtcbtheorem[use counter from=prin, number within=section]{ex}{Example}%
+{colback=blue!0,colframe=blue!35!black,fonttitle=\bfseries,breakable}{th}
+\newtcbtheorem[use counter from=prin, number within=section]{nota}{Notation}%
+{colback=blue!0,colframe=blue!35!black,fonttitle=\bfseries,breakable}{th}
+\newtcbtheorem[use counter from=prin, number within=section]{defi}{Definition}%
+{colback=green!0,colframe=green!35!black,fonttitle=\bfseries,breakable}{th}
+
+
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\G}{\mathbb{G}}
+
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\U}{\mathbb{U}}
+
+\newcommand{\ao}{\mathfrak{a}}
+\newcommand{\bo}{\mathfrak{b}}
+
+
+\newcommand{\ie}{\mathrm{\textit{i.e.}}}
+
+\newcommand{\Sig}{\textbf{Sin}}
+\newcommand{\expg}{\textbf{Exp}}
+
+\newcommand{\Ro}{\mathcal{R}}
+\newcommand{\Fo}{\mathcal{F}}
+\newcommand{\Mo}{\mathcal{M}}
+\newcommand{\Noo}{\mathcal{N}}
+\newcommand{\Ho}{\mathcal{H}}
+\newcommand{\Po}{\mathcal{P}}
+\newcommand{\Lo}{\mathcal{L}}
+\newcommand{\Qo}{\mathcal{Q}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\Go}{\mathcal{G}}
+\newcommand{\Co}{\mathcal{C}}
+\newcommand{\So}{\mathcal{S}}
+\newcommand{\To}{\mathfrak{T}}
+\newcommand{\Soo}{\mathfrak{S}}
+
+\newcommand{\Aut}{\mathrm{Aut}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\Ima}{\mathrm{Im}}
+\newcommand{\Ree}{\mathrm{Re}}
+\newcommand{\Tr}{\mathrm{Tr}}
+\newcommand{\Sol}{\mathrm{Sol}}
+\newcommand{\Vect}{\mathrm{Vect}}
+\newcommand{\DL}{\mathrm{DL}}
+\newcommand{\ch}{\mathrm{ch}}
+\newcommand{\cotan}{\mathrm{cotan}}
+\newcommand{\sh}{\mathrm{sh}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\Rot}{\mathrm{Rot}}
+\newcommand{\GL}{\mathrm{GL}}
+
+
+
+\newcommand{\Bo}{\mathbf{B}}
+\newcommand{\Ao}{\mathbf{BA}}
+\newcommand{\LN}{\mathbf{Ln}}
+\newcommand{\AAA}{\mathbf{A}}
+\newcommand{\LNA}{\mathbf{La}}
+\newcommand{\SeACV}{\mathbf{SerACV}}
+\newcommand{\SeCV}{\mathbf{SerCV}}
+\newcommand{\SuCV}{\mathbf{SuiCV}}
+
+
+
+\newcommand{\Lor}{\mathcal{L}or}%{\mathrm{Lor}}
+\newcommand{\loro}{\mathfrak{lor}}
+\newcommand{\SLor}{\mathrm{SLor}}
+\newcommand{\Loro}{\mathcal{L}or}
+\newcommand{\New}{\mathrm{New}}
+\newcommand{\SNew}{\mathrm{SNew}}
+\newcommand{\Met}{\mathbf{Met}}
+\newcommand{\Newo}{\mathcal{N}ew}
+\newcommand{\Ort}{\mathrm{O}}
+\newcommand{\SOrt}{\mathrm{SO}}
+\newcommand{\Orto}{\mathcal{O}}
+\newcommand{\Poin}{\mathcal{P}oin}
+\newcommand{\poin}{\mathfrak{poin}}
+\newcommand{\SPoin}{\mathrm{SPoin}}
+\newcommand{\Poino}{\mathcal{P}oin}
+\newcommand{\MAT}{\mathcal{M}at}
+\newcommand{\Kal}{\mathcal{K}}
+\newcommand{\Gam}{\varGamma}
+\newcommand{\msegg}{\llbracket}
+\newcommand{\msegd}{\rrbracket}
+\newcommand{\card}{\mathrm{card}}
+\newcommand{\msegn}{\msegg 1,n \msegd}
+\newcommand{\msegno}{\msegg 0,n \msegd}
+\newcommand{\msegp}{\msegg 1,p \msegd}
+\newcommand{\msegpo}{\msegg 0,p \msegd}
+\newcommand{\msegm}{\msegg 1,m \msegd}
+\newcommand{\msegmo}{\msegg 0,m \msegd}
+\newcommand{\fix}{\mathrm{fix}}
+\newcommand{\Boo}{\mathcal{B}}
+\title{Projet Mathématiques et Signal} 
+\author{Hermès Noumbogo et Becker Obie Obolo}
+
+
+\date{\today}
+\begin{document}  
+                
+\maketitle
+
+\section{Problématique}
+
+La problématique centrale de ce projet est de \textbf{dégager des informations significatives à partir de données climatiques brutes en utilisant des outils mathématiques et de traitement du signal}. Il s'agit d'étudier la variabilité des signaux de données pour identifier et modéliser des cycles temporels (annuels, infra-annuels et pluriannuels) et estimer la part de bruit.
+
+\section{Difficultés Potentielles}
+
+Plusieurs difficultés pourraient être rencontrées au cours de ce projet :
+\begin{itemize}
+    \item \textbf{Gestion des données massives} : Le jeu de données couvre une période de plus de 70 ans, ce qui représente un volume de données conséquent. Le traitement et le nettoyage initial de ces données pourraient s'avérer complexes.
+    \item \textbf{Identification des cycles} : L'identification précise des cycles autres que le cycle annuel (comme les cycles synoptiques ou pluriannuels) peut être ardue en raison de la complexité des signaux et de la présence de bruit. Cela nécessitera l'utilisation d'outils d'analyse de fréquences, tels que la transformée de Fourier, pour mettre en évidence les périodes récurrentes.
+    \item \textbf{Modélisation} : Proposer une modélisation simple mais efficace de l'évolution temporelle des données, en particulier pour les cycles moins évidents, exigera une bonne compréhension des outils mathématiques et une interprétation rigoureuse des résultats.
+    \item \textbf{Estimation du bruit} : Estimer qualitativement la proportion de bruit est un défi, car il faut d'abord isoler les signaux périodiques et les tendances du reste des variations qui peuvent être considérées comme du bruit. Cela demande une approche méthodologique solide.
+    \item \textbf{Compétences en programmation} : Le projet nécessite de bonnes compétences en programmation Python pour l'analyse, la visualisation des données et l'implémentation des algorithmes d'analyse du signal.
+\end{itemize}
+
+\section{Description statistique}
+	Les éléments auxquels nous nous intéresseront pour la description statistique sont : la moyenne, la médiane, le mode, le maximum, le minimum et l’écart type. Ce qui nous permettra d'avoir une vision globale des signaux caractérisas par nos variables, ainsi que de premières déductions.\\
+	
+	\begin{table}[H]
+		\centering
+		\small
+		\begin{tabular}{lcccccc}
+			\toprule
+			& \textbf{moyenne} & \textbf{médiane} & \textbf{mode} & \textbf{maximum} & \textbf{minimum} & \textbf{écart type} \\ \midrule
+			\textbf{tavg} & 10,69 C & 10,9 C & 14,6 C & 29,6 C & -14,8 C & 7,46 C \\
+			\textbf{tmin} & 6,33 C & 6,6 C & 6,0 C & 23,8 C & -23,2 C & 6,67 C \\
+			\textbf{tmax} & 15,27 C & 15,5 C & 17,2 C & 38,9 C & -14,4 C & 8,88 C \\
+			\textbf{prcp} & 1,71 mm & 0,0 mm & 0,0 mm & 66,3 mm & 0,0 mm & 3,95 mm \\
+			\textbf{snow} & 2,04 mm & 0,0 mm & 0,0 mm & 400,0 mm & 0,0 mm & 14,19 mm \\
+			\textbf{wspd} & 10,13 km/h & 8,9 km/h & 5,0 km/h & 93,6 km/h & 0,0 km/h & 5,64 km/h \\
+			\textbf{wpgt} & 30,40 km/h & 28,1 km/h & 24,1 km/h & 143,6 km/h & 1,8 km/h & 14,03 km/h \\
+			\textbf{pres} & 1017,27 hPa & 1017,2 hPa & 1017,8 hPa & 1045,1 hPa & 980,0 hPa & 8,21 hPa \\
+			\textbf{tsun} & 297,07 min & 234,0 min & 0,0 min & 930,0 min & 0,0 min & 273,33 min \\ \bottomrule
+		\end{tabular}
+	\end{table}
+	
+\begin{itemize}
+	\item \textbf{Températures : tavg, tmin, tmax} \\\\
+	Les signaux de températures sont des signaux \textbf{échantillonnés} (temps discret avec Te = 1jour, d’amplitudes continues), \textbf{permanents} (énergies infinies, mais puissances finies : 169.96, 84.53, 312.14). \\
+	Pour les trois signaux de température, on observe que la \textbf{moyenne} est extrêmement proche de la \textbf{médiane} ; l'écart minime entre la moyenne et la médiane démontre que les distributions de température à Strasbourg sont \textbf{symétriques}. Ce qui signifie que les épisodes de froid extrême et de chaleur extrême se compensent globalement autour de la valeur centrale.
+	
+	\vspace{0.5cm}
+	
+	\item \textbf{La pression, la pluie, le vent, la neige et ensoleillement : pres, prcp, wspd, wgpt, snow, tsun} 
+	\\\\
+	Pour la pluie et la neige, le \textbf{mode} et la \textbf{médiane} sont à 0. Cela signifie que le signal est "nul" la majeure partie du temps. Ce sont des signaux quasiment \textbf{impulsionnels}. \\
+	\textbf{L'écart-type} est très faible par rapport à la \textbf{moyenne} et les ordres de grandeurs des pressions au fil des jours, ce qui montre que la pression est le signal le plus \textbf{stable} de la base de données. \\
+	La \textbf{puissance moyenne} des rafales est beaucoup plus grande que celle du vent moyen, illustrant la nature turbulente et \textbf{imprévisible} de ce signal. \\
+	\textbf{L'écart-type} est presque aussi grand que la \textbf{moyenne}, ce qui témoigne d'une très forte dispersion des durées d'ensoleillement d'un jour à l'autre ; d’une saison à l’autre.
+\end{itemize}
+	\vspace{0.5cm}
+	
+	La description statistique confirme que nous avons affaires à des signaux permanents, avec des comportements distincts (températures symétriques vs précipitations impulsionnelles). Toutefois, les indicateurs globaux (moyenne, écart-type) ne permettent pas de caractériser l’organisation temporelle des variations observées. \\
+	Pour prouver l'existence d'un cycle périodique déterministe, nous avons besoin d’analyser dans les domaine temporel et fréquentiel les signaux, ce qui permettra d'isoler précisément le pic spectral du cycle annuel et d’en mesurer la puissance.
+
+\section{Cycles annuels}
+\section{Cycles synoptiques, pluriannuels}
+\section{Proportions de bruit}
+\section{conclusion}
+
+\end{document}
